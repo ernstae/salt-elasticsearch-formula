@@ -1,6 +1,6 @@
 # salt-elasticsearch-formula
 
-Salt formula for installing elasticsearch (5.X.X) to ubuntu
+Salt formula for installing 5.x.x or 6.x.x elasticsearch to ubuntu
 
 Example `top.sls`:
 
@@ -16,7 +16,8 @@ base:
 elasticsearch:
   lookup:
     cluster_name: 'salt-cluster'
-    version: '5.6.3'
+    version: '6.2.0'
+    repo_url: 'http://artifacts.elastic.co/packages/6.x'
     use_memory: 0.5
     bootstrap:
       memory_lock: 'true'
